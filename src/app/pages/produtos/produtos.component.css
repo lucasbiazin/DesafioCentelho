@@ -1,0 +1,54 @@
+.botao-obter {
+
+   margin-left: 40% !important;
+}
+
+
+.div-produtos {
+
+   background-color: #e3e3e3;
+   min-height: 50px;
+   margin-top: -290px;
+
+
+}
+
+.navbar {
+
+   background-color: #e3e3e3 !important;
+   border-radius: 15px;
+   padding: 10px;
+
+}
+
+.nav-menu {
+   width: 100%;
+
+
+}
+
+
+.div-produto {
+
+   min-width: 500px;
+
+
+}
+
+.img-produto {
+
+   max-width: 150px;
+   max-height: 150px;
+
+}
+
+.div-cards {
+
+   min-width: 200px;
+
+}
+
+.div-cards:hover {
+
+   transform: scale(1.1)
+}

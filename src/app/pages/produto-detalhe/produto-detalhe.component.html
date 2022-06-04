@@ -1,0 +1,23 @@
+<div class="container bg-body rounded d-flex justify-content-center div-produto">
+    <div class="row d-flex justify-content-center ">
+        <div class="col  rounded p-3  d-flex justify-content-center ">
+            <div class="text-center  div-cards shadow bg-body rounded p-3 card border border-light">
+                <img [src]="produto.images[0]" class="img-produto img-fluid">
+                <div> <strong>Name:</strong> {{produto.title}} </div>
+                <div class="mt-2"><strong>Discount: U$: </strong> <s>{{produto.discountPercentage}}</s> </div>
+                <div class="mt-2"><strong>Price: U$:</strong> {{produto.price }},00 </div>
+                <div class="mt-2"><strong>Category:</strong> {{produto.category}}</div>
+                <div class="mt-2"><strong>Rating:</strong> {{produto.rating}}</div>
+                <div class="mt-2"><strong>Brand:</strong> {{produto.brand}}</div>
+                <div class="mt-4"><strong>Description:</strong> {{produto.description}}</div>
+
+                <div class="bg-body rounded mt-5 m-2">
+                    <button type="button" class="btn btn-info"><strong>Add to Cart</strong> </button>
+                    <button type="button" class="btn btn-info  m-2" button (click)="VoltarProduto()">
+                        <strong>Keep Buying</strong>
+                    </button>
+
+                </div>
+
+
+            </div>

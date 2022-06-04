@@ -1,1 +1,18 @@
-<p>produtos works!</p>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+
+        <div (click)="abrirProduto(produto.id)" *ngFor="let produto of produtosObtidos"
+            class="col  rounded p-3  d-flex justify-content-center">
+            <div class="text-center  div-cards shadow bg-body rounded p-3">
+                <img [src]="produto.images[0]" class="img-produto">
+                <div class="mt-2"><strong>{{produto.title}}</strong></div>
+                <div class="mt-2 secundary-text">U$: {{produto.price }}</div>
+
+            </div>
+
+
+            <!-- <div>{{produto.description}}</div> -->
+
+        </div>
+
+    </div>

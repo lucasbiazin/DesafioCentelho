@@ -1,0 +1,14 @@
+.card {
+
+    /* border: ridge;
+    border-color: #0dcaf0;
+    box-shadow: 0 0 2em #0dcaf0 !important; */
+}
+
+.img-produto {
+
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 600px;
+    image-rendering: auto;
+}
