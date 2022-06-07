@@ -2,13 +2,12 @@
 
 <hr>
 
-
 <div class="d-flex justify-content-center">
 
     <div class="dropdown aling-items-center m-2">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
             aria-expanded="false">
-          <strong>Order by Price</strong>  
+            <strong>Order by Price</strong>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <li><button class="dropdown-item" type="button"
@@ -20,16 +19,17 @@
     </div>
 
 
-
     <div class="dropdown aling-items-center m-2">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
             aria-expanded="false">
-          <strong>Categories</strong>  
+            <strong>Categories</strong>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <li class="dropdown-item" type="button" (click)="getAllProducts()">
                 All</li>
-                <li><hr class="dropdown-divider"></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
             <li class="dropdown-item" type="button" *ngFor="let categoria of categoriasObtidas"
                 (click)="getForCategory(categoria)">
                 {{categoria}}</li>
@@ -42,8 +42,8 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
 
-        <app-produto-miniatura-detalhes [produtoDoComponente]="produto"
-            *ngFor="let produto of produtosObtidos " class=" col  rounded p-3  d-flex justify-content-center">
+        <app-produto-miniatura-detalhes [produtoDoComponente]="produto" *ngFor="let produto of produtosObtidos "
+            class=" col  rounded p-3  d-flex justify-content-center">
 
         </app-produto-miniatura-detalhes>
 

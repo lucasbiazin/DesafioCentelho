@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { CategoriaService } from 'src/app/dominio/categorias/categoria.service';
 import { OrdenaLista } from 'src/app/dominio/produtos/ordena-lista';
 import { ProdutoService } from 'src/app/dominio/produtos/produto.service';
@@ -23,8 +22,8 @@ export class ProdutosComponent implements OnInit {
 
   constructor(private produtoService: ProdutoService,
              private categoriasService: CategoriaService,
-             private route: Router
-   ) {
+
+  ) {
 
   }
 
@@ -41,9 +40,6 @@ export class ProdutosComponent implements OnInit {
   }
 
 
-  abrirCarrinho() {
-    this.route.navigate(['carrinho'])
-  }
 
   getAllCategorias() {
     this.categoriasService.obterTodas()

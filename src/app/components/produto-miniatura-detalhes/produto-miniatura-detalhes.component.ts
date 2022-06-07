@@ -19,12 +19,6 @@ export class ProdutoMiniaturaDetalhesComponent implements OnInit {
 
   }
 
-
-  abrirCarrinho() {
-    this.route.navigate(['carrinho'])
-
-  }
-
   ngOnInit() {
   }
 

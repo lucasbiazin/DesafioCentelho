@@ -9,29 +9,22 @@ import { FormsModule } from '@angular/forms';
 import { ProdutoMiniaturaDetalhesComponent } from './components/produto-miniatura-detalhes/produto-miniatura-detalhes.component';
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     ProdutosComponent,
     ProdutoDetalheComponent,
     ProdutoMiniaturaDetalhesComponent,
-    
-    
-   
 
-    
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-   
-    
+
 
 
   ],

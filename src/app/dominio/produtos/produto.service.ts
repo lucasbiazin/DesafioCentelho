@@ -25,11 +25,7 @@ export class ProdutoService {
 
   }
 
-  updateCarrinho(listaDeProdutos: any[]) {
-    return this.http.put<any>(`${RECURSO}`, listaDeProdutos).toPromise();
-
-  }
-
+ 
 
   obterPorId(id: number) {
     return this.http.get<Product>(`${RECURSO}/${id}`).toPromise();
