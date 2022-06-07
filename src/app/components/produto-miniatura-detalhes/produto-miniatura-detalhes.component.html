@@ -1,0 +1,5 @@
+<div class="text-center  div-cards shadow bg-body rounded p-3" (click)="abrirProduto(produtoDoComponente.id)">
+    <img [src]="produtoDoComponente.images[0]" class="img-produto rounded">
+    <div class="mt-2"><strong>{{produtoDoComponente.title}}</strong></div>
+    <div class="mt-2">U$: {{produtoDoComponente.price }}</div>
+</div>

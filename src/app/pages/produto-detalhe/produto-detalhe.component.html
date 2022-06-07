@@ -1,9 +1,9 @@
-<div class="container bg-body rounded d-flex justify-content-center div-produto">
+<div class="container bg-body rounded d-flex justify-content-center div-produto mt-5">
     <div class="row d-flex justify-content-center ">
         <div class="col  rounded p-3  d-flex justify-content-center ">
             <div class="text-center  div-cards shadow bg-body rounded p-3 card border border-light">
-                <img [src]="produto.images[0]" class="img-produto img-fluid">
-                <div> <strong>Name:</strong> {{produto.title}} </div>
+                <h1 class="mb-3">  {{produto.title}} </h1>
+                <img [src]="produto.images[0]" class="img-produto img-fluid">               
                 <div class="mt-2"><strong>Discount: U$: </strong> <s>{{produto.discountPercentage}}</s> </div>
                 <div class="mt-2"><strong>Price: U$:</strong> {{produto.price }},00 </div>
                 <div class="mt-2"><strong>Category:</strong> {{produto.category}}</div>
@@ -21,3 +21,4 @@
 
 
             </div>
+            

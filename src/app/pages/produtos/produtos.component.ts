@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CategoriaService } from 'src/app/dominio/categorias/categoria.service';
+import { OrdenaLista } from 'src/app/dominio/produtos/ordena-lista';
 import { ProdutoService } from 'src/app/dominio/produtos/produto.service';
 import { Product } from 'src/app/models/product.model';
 
@@ -14,23 +15,50 @@ import { Product } from 'src/app/models/product.model';
 export class ProdutosComponent implements OnInit {
 
 
+  categoriasObtidas: String[];
   produtosObtidos: Product[];
-  
- 
+  categoria: string;
 
-  categories: Product[]
+
 
   constructor(private produtoService: ProdutoService,
-    private route: Router,
-    private http: HttpClient
-
-  ) {
+             private categoriasService: CategoriaService,
+             private route: Router
+   ) {
 
   }
 
 
-  abrirProduto(id: number) {
-    this.route.navigate(['produto-detalhe', id])
+  ordenarPorPrecoMenorAoMaiorClick(listaProdutos: Product[]) {
+    listaProdutos = new OrdenaLista().ordenarPorPrecoMenorAoMaior(listaProdutos)
+
+
+  }
+
+  ordenarPorPrecoMaiorAoMenorClick(listaProdutos: Product[]) {
+    listaProdutos = new OrdenaLista().ordenarPorPrecoMaiorAoMenor(listaProdutos)
+
+  }
+
+
+  abrirCarrinho() {
+    this.route.navigate(['carrinho'])
+  }
+
+  getAllCategorias() {
+    this.categoriasService.obterTodas()
+      .then(categorias => {
+        this.categoriasObtidas = categorias;
+        console.log(categorias)
+      }).catch(error => console.log(error));
+
+  }
+
+  getForCategory(categoria: string) {
+    this.produtoService.obterPorCategoria(categoria)
+      .then(result => {
+        this.produtosObtidos = result.products;
+      }).catch(error => console.log(error));
 
   }
 
@@ -38,15 +66,17 @@ export class ProdutosComponent implements OnInit {
   getAllProducts() {
     this.produtoService.obterTodos()
       .then(resposta => {
-        console.log(resposta.products)
         this.produtosObtidos = resposta.products;
       }).catch(error => console.log(error));
   }
 
 
+
   ngOnInit() {
 
+
     this.getAllProducts()
+    this.getAllCategorias()
 
 
   }

@@ -7,4 +7,4 @@ export interface ResultObterTodos {
     skip: number
     limit: number
 
-}
+}   

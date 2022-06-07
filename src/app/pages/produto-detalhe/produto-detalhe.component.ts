@@ -13,27 +13,19 @@ import { Product } from 'src/app/models/product.model';
 export class ProdutoDetalheComponent implements OnInit {
 
 
-  
- 
-
   id: number;
 
   produto: Product;
 
-  constructor(private route: ActivatedRoute, 
+  constructor(private route: ActivatedRoute,
 
-    private produtoService: ProdutoService, 
+    private produtoService: ProdutoService,
     private rout: Router,
-) {
+  ) {
 
   }
   VoltarProduto() {
-    console.log('voltar na tela'); 
     this.rout.navigate(['produtos'])
-    
-    
-
-  
 
 
   }
@@ -45,14 +37,14 @@ export class ProdutoDetalheComponent implements OnInit {
     this.produtoService.obterPorId(this.id)
       .then(produtoRecebido => {
         this.produto = produtoRecebido;
-        
-       
+
+
       })
 
       .catch(error => console.log(error));
 
   }
-  
+
 
 
 

@@ -1,0 +1,18 @@
+
+.img-produto {
+
+    max-width: 150px;
+    max-height: 150px;
+ 
+ }
+ 
+ .div-cards {
+ 
+    min-width: 200px;
+ 
+ }
+ 
+ .div-cards:hover {
+ 
+    transform: scale(1.1)
+ }
